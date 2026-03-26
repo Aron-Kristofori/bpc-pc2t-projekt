@@ -2,5 +2,5 @@
 Projekt do predmetu BPC-PC2T.
 
 1. řešitel: Áron Kristofori (Čt. 10:00 - 11:40)
-2. řešitel: Tomáš Lohynský
+2. řešitel: Tomáš Lohynský  (Čt. 15:00 - 16:40)
 
