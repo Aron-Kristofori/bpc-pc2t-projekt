@@ -1,3 +1,5 @@
+package people;
+
 public abstract class zamestnanec {
         static int nextID;
         private int ID;
@@ -34,4 +36,18 @@ public abstract class zamestnanec {
                 nextID = this.ID + 1;
             }
         }
+
+        public zamestnanec(int YoB, String name, String surname) {
+            if(nextID == 0){
+                this.ID = 1;
+                nextID = this.ID + 1;
+            } else {
+                this.ID = nextID;
+                nextID = this.ID + 1;
+            }
+            this.YoB = YoB;
+            this.name = name;
+            this.surname = surname;
+        }
+
 }
