@@ -12,9 +12,11 @@ public class Main {
         collaborations spoluprace = new collaborations();
         Scanner scanner = new Scanner(System.in);
         while(running){
+            System.out.println("-------------------------------");
             System.out.println("Select an operation to do: ");
             System.out.println("1. Add an employee");
             System.out.println("2. Add a collaboration");
+            System.out.println("3. Remove an employee");
             System.out.println("5. List all added employees");
             System.out.println("-------------------------------");
             int choice = scanner.nextInt();
@@ -57,6 +59,13 @@ public class Main {
                     int rating = scanner.nextInt();
                     scanner.nextLine();
                     spoluprace.addCollab(firstID, secondID, rating);
+                    break;
+                case 3:
+                    System.out.print("ID of employee: ");
+                    int ID = scanner.nextInt();
+                    scanner.nextLine();
+                    spoluprace.removeCollabs(ID);
+                    databaze.removeEmployee(ID);
                     break;
                 case 5:
                     databaze.printEmployees();

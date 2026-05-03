@@ -36,4 +36,15 @@ public class collaborations {
             return false;
         }
     }
+
+    public void removeCollabs(int ID){
+        if(isCreated(ID)){
+            collabs.get(ID).forEach((key, rating) -> {
+                collabs.get(key).remove(ID);
+            });
+            collabs.remove(ID);
+        } else {
+            System.out.println("Employee has no collaborations or doesn't exist!");
+        }
+    }
 }

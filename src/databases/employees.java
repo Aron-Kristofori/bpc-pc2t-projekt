@@ -23,4 +23,12 @@ public class employees {
         });
     }
 
+    public void removeEmployee(int ID){
+        if(employeeDB.get(ID) == null){
+            System.out.println("Employee doesn't exist!");
+        } else {
+            employeeDB.remove(ID);
+        }
+    }
+
 }
