@@ -17,7 +17,10 @@ public class Main {
             System.out.println("1. Add an employee");
             System.out.println("2. Add a collaboration");
             System.out.println("3. Remove an employee");
+            System.out.println("4. Search for employee by ID");
             System.out.println("5. List all added employees");
+            System.out.println("6. List all collaborations");
+            System.out.println("7. Get count of employees");
             System.out.println("-------------------------------");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -62,13 +65,27 @@ public class Main {
                     break;
                 case 3:
                     System.out.print("ID of employee: ");
-                    int ID = scanner.nextInt();
+                    int ID3 = scanner.nextInt();
                     scanner.nextLine();
-                    spoluprace.removeCollabs(ID);
-                    databaze.removeEmployee(ID);
+                    spoluprace.removeCollabs(ID3);
+                    databaze.removeEmployee(ID3);
+                    break;
+                case 4:
+                    System.out.print("ID of employee: ");
+                    int ID4 = scanner.nextInt();
+                    scanner.nextLine();
+                    databaze.printEmployee(ID4);
+                    spoluprace.printCollabs(ID4);
                     break;
                 case 5:
                     databaze.printEmployees();
+                    break;
+                case 6:
+                    spoluprace.printCollabs();
+                    break;
+                case 7:
+                    System.out.println("Number of data analysts is: " + datovyAnalytik.getCount());
+                    System.out.println("Number of security specialists is: " + securitySpecialist.getCount());
                     break;
                 default:
                     System.out.println("Invalid choice!");

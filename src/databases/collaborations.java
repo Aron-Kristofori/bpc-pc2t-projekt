@@ -47,4 +47,30 @@ public class collaborations {
             System.out.println("Employee has no collaborations or doesn't exist!");
         }
     }
+
+    public void printCollabs(){
+        System.out.println("--- Collabs ---");
+        collabs.forEach((key, map) -> {
+            System.out.println("--- ID: " + key + " ---");
+            map.forEach((ID, rating) -> {
+                System.out.println("-> " + ID + " | " + rating);
+            });
+        });
+        System.out.println("---------------");
+    }
+
+    public void printCollabs(int ID){
+        final int[] ratingSum = new int[1];
+        final int[] countCollabs = new int[1];
+        System.out.println("--- Collabs ---");
+        HashMap<Integer, Integer> map = collabs.get(ID);
+            System.out.println("--- ID: " + ID + " ---");
+            map.forEach((colleague, rating) -> {
+                System.out.println("-> " + colleague + " | " + rating);
+                ratingSum[0] += rating;
+                countCollabs[0]++;
+            });
+        System.out.println("---------------");
+        System.out.println("No. of collabs: " + countCollabs[0] + "| Avg. rating: " + ((float)ratingSum[0]/countCollabs[0]));
+    }
 }

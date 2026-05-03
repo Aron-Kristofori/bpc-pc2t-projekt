@@ -23,6 +23,12 @@ public class employees {
         });
     }
 
+    public void printEmployee(int ID){
+        zamestnanec toPrint = employeeDB.get(ID);
+        System.out.println("Name: " + toPrint.getName() + " " + toPrint.getSurname());
+        System.out.println("YoB: " + toPrint.getYoB() + " ID: " + toPrint.getID());
+    }
+
     public void removeEmployee(int ID){
         if(employeeDB.get(ID) == null){
             System.out.println("Employee doesn't exist!");
