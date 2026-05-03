@@ -6,6 +6,7 @@ public class collaborations {
     private HashMap<Integer, HashMap<Integer, Integer>> collabs;
 
     public collaborations(){
+        this.collabs = new HashMap<>();
     }
 
     public void addCollab(int firstEmployee, int secondEmployee, int rating){

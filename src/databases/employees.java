@@ -5,7 +5,9 @@ import java.util.HashMap;
 public class employees {
     private HashMap<Integer, zamestnanec> employeeDB;
 
-    public employees(){}
+    public employees(){
+        this.employeeDB = new HashMap<>();
+    }
 
     public void addEmployee(zamestnanec pointer){
         if(employeeDB.get(pointer.getID()) == null){

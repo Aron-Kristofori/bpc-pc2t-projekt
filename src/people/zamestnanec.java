@@ -7,10 +7,6 @@ public abstract class zamestnanec {
         private String name;
         private String surname;
 
-        public static int getNextID() {
-            return nextID;
-        }
-
         public int getID() {
             return this.ID;
         }
